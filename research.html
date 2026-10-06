@@ -6,7 +6,7 @@
   <meta name="description" content="Research by Yiming Liao on evaluating generated videos and interpretable modeling of driving behavior.">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Research — Yiming Liao">
-  <meta property="og:description" content="Research on video generation evaluation and interpretable models.">
+  <meta property="og:description" content="Research by Yiming Liao on video generation evaluation and interpretable models.">
   <meta property="og:type" content="website">
   <title>Research — Yiming Liao</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='5' fill='%238a233b'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-family='Arial,sans-serif' font-size='25' fill='white'%3Ey%3C/text%3E%3C/svg%3E">
@@ -32,7 +32,13 @@
         <div class="project-topic"><p>Video generation</p></div>
         <div class="project-body">
           <h2 id="video-title">Evaluating Human Motion in Generated Videos</h2>
-          <p>This ongoing project studies how to evaluate human motion and actions in generated videos. It examines the limitations of existing evaluation methods and explores more reliable ways to assess motion quality.</p>
+          <p class="project-meta">With Prof. Bo Yuan, Rutgers University · May 2026–present</p>
+          <p>This ongoing project asks how reliably, and how transparently, automated evaluators judge human motion in generated videos.</p>
+          <ul class="project-points">
+            <li>Analyzed the scoring mechanisms of VBench and WorldScore to see how their video quality metrics relate to observable content and motion.</li>
+            <li>Evaluated multimodal LLMs as autonomous motion scorers and found score saturation and weak visual justification in the tested settings.</li>
+            <li>Designed a two-stage observation-and-verification protocol that ties each score on body structure, coordination, contact and support, and motion progression to traceable visual evidence. Validation against human judgments is planned.</li>
+          </ul>
         </div>
       </article>
       <article class="project" id="interpretable-models" aria-labelledby="driving-title">
@@ -40,8 +46,26 @@
         <div class="project-body">
           <h2 id="driving-title">Can State Equations Describe Personalized Driving Behavior?</h2>
           <p class="project-authors"><strong>Yiming Liao</strong>, Guoyuan Wu, Xishun Liao</p>
-          <p>This project explores interpretable modeling of personalized driving behavior using compact recurrent neural networks (TinyRNNs). It investigates how explicit state equations can describe the dynamics learned by these models and make individual driving patterns easier to understand.</p>
-          <p class="manuscript-status">Unpublished manuscript.</p>
+          <p class="project-meta">With Prof. Xishun Liao, University of Central Florida · Oct 2025–Aug 2026</p>
+          <p>This project asks whether the dynamics learned by compact recurrent models of individual drivers can be written down as explicit state equations.</p>
+          <ul class="project-points">
+            <li>Trained driver-specific TinyGRU models with four-dimensional hidden states on 40 trips from two drivers to predict maneuvers one second ahead.</li>
+            <li>Constructed explicit state-transition equations using observable-input features, ridge regression, stability-constrained state coupling, and recursive feature selection.</li>
+            <li>Validated the equations by full-sequence recursive rollout and five-fold trip-level cross-validation; they recover the dominant hidden-state trajectories and maneuver probabilities, while a controlled experiment exposed history-dependent effects they cannot reproduce.</li>
+          </ul>
+          <p class="manuscript-status">Manuscript in preparation.</p>
+        </div>
+      </article>
+      <article class="project" id="earlier-projects" aria-labelledby="earlier-title">
+        <div class="project-topic"><p>Earlier projects</p></div>
+        <div class="project-body">
+          <h2 id="earlier-title">Undergraduate Projects</h2>
+          <h3>FPGA Acceleration of Binarized Neural Networks</h3>
+          <p class="project-meta">With Prof. Xiaobo Zhou, Beijing Jiaotong University · Undergraduate thesis, 2024–2025</p>
+          <p>Adapted a binarized neural network for FPGA inference with parallelized convolution and a pipelined hardware design, verified in ModelSim simulation and on-board deployment.</p>
+          <h3>Small-Target Detection in Maritime Scenes</h3>
+          <p class="project-meta">With Prof. Hang Zhou, Beijing Jiaotong University · 2022–2023</p>
+          <p>Built a coarse-to-fine pipeline combining SIFT/SURF features with R-CNN to detect and track small flying targets against sea clutter.</p>
         </div>
       </article>
     </main>
